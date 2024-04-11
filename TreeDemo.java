@@ -128,12 +128,20 @@ class Node{
 	   
 	   
 	   
-	   /*
-	   a method to find the node in the tree
-	   with a smallest key
-	   */
+	   /**
+	    * Finds the node with the smallest value in the binary search tree.
+	    *
+	    * @param root the root of the tree
+	    * @return the smallest value in the tree
+	    */
 	   public int getMin(Node root){
-         //implement in here
+		   if (root == null) {
+			   throw new NullPointerException("Tree is empty");
+		   }
+		   while (root.left != null) {
+			   root = root.left;
+		   }
+		   return root.value;
 	      
 	   }
 	  
