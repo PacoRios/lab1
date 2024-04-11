@@ -53,12 +53,18 @@ class Node{
 	      }//closing main if-else 
 	   }
 	   
-	   /*
-	   pre-order traversal
-	   Prints the value of every node preorder
-	   */
+	       /**
+		* Performs a pre-order traversal of the binary search tree.
+       	 	*
+        	* @param root the root of the tree
+		*/
 	   public void preOrderTraversal(Node root){
-		//implement in here
+		if (root != null) {
+			System.out.println(root.value + " ");
+			preOrderTraversal(root.left);
+			preOrderTraversal(root.right);
+			
+		}
 		   
 	   }
 
