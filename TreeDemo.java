@@ -101,14 +101,30 @@ class Node{
 	   
 	   
 	   
-	   /*
-	   a method to find the node in the tree
-	   with a specific value
-	   */
+	   /**
+            * Searches for a node with a specific value in the binary search tree.
+	    *
+            * @param root the root of the tree
+	    * @param key  the value to search for
+            * @return true if the value is found, false otherwise
+            */
 	   public boolean find(Node root, int key){
-		 //implement in here
+		 if (root == null) {
+			 return false;
+		 }
+		 if (root.value == key) {
+			 return true;
+		 }
+		 if (key < root.value) {
+			 return find(root.left, key);
+		 } else {
+			 return find(root.right, key);
+		 }
 		  
 	   }
+	   
+	   
+	   
 	   
 	   
 	   
